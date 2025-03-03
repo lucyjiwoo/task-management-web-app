@@ -1,0 +1,110 @@
+/* Instead of styling the body tag directly, use a class */
+.body-style {
+    height :100vh;
+    margin: 0;
+  }
+
+/* Container that holds all elements in the body */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; 
+  }
+
+/*Header*/
+.final-header {
+    width: 100vw;         /*full viewport width*/
+    height: vh;
+    text-align: end;
+    background-size: cover;
+    background-position: center;
+  }
+
+.header-text {
+    margin-right:4vw;
+    font-weight: bold;
+    font-size: 250%;
+    color:rgb(249, 134, 2);
+}
+
+.footer_final {
+  width: 100vw;
+  padding: 1vh 0;
+  text-align: center;
+  color: rgb(255,255,255);
+  background-color: rgb(249, 134, 2);
+}
+
+/* Style for main section for home */
+#main-home {
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  align-items: center;
+}
+
+/* Style for Section of creating new board */
+.create-block-section {
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  align-items: center;
+  margin-top: 2vh;
+  padding: 1%;
+  border: 0.3rem solid rgb(249, 134, 2);
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+  color: rgb(249, 134, 2);
+}
+/* Section for blocks */
+#blocks-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  border-top: 0.5rem solid rgb(246, 180, 105);
+  width: 90vw;
+  margin-top: 4vh;
+  padding-top: 2vh;
+  box-sizing: border-box;
+}
+/* Each board container */
+.board-box {
+  border: 0.3rem solid #ccc;
+  border-radius: 0.3rem;
+  padding: 2%;
+  margin-bottom: 2vh;
+  width: 30vw;
+  height: 7vh;
+  text-align: center;
+}
+
+#add-btn, #create-board-btn{
+  padding:0.3% 1%;
+  font-size: 70%;
+  margin-top:1%;
+  border: 0.3rem solid rgb(249, 134, 2);
+  background-color: rgb(249, 134, 2);
+  border-radius: 1.5rem;
+  color: rgb(255,255,255);
+}
+
+#create-board-btn {
+  width: 100%;
+  font-size: 100%;
+  margin-top: 2vh;
+  border-radius: 0.7rem;
+}
+#board_name, .members {
+  padding:1%;
+  margin: 1vh 5vw;
+  font-size: 100%;
+}
+
+.members{
+  margin-bottom:0.1vh;
+}
+

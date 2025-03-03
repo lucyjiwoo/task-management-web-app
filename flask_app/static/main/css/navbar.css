@@ -1,0 +1,99 @@
+/* Navigation bar container */
+.nav-bar{
+    display:flex;
+    height:5vh;
+    width: 90vw;
+    background-color: rgb(248, 182, 107);
+    color: rgb(245, 245, 245);
+    align-items: center;
+    padding: 0 5vw;
+    justify-content: end;
+    position: relative;     /* For positioning dropdown relative to navbar */
+}
+/* List of navigation items */
+.nav-lists {
+    display:flex;
+    flex-wrap: wrap; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;   
+    align-items: center;
+}
+
+/* Sidebar (for mobile view) initially hidden */
+.side-bar {
+    display: none; 
+    flex-direction: column;
+}
+
+/* Checkbox input (for the dropdown menu) is hidden */
+#menu-click{
+    display: none;
+}
+
+/* Menu icon for dropdown */
+.menu-icon{
+    width: 3vh;
+    height:3vh;
+    cursor: pointer;
+    background-image: url("../images/menu-bar.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dropdown menu for navigation (mobile view) */
+.dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    background-color: rgb(236, 190, 118);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+/* Links inside the dropdown menu */
+.drowdown-link{
+    padding: 3vh 7vw;
+}
+
+/* Responsive design for small screens (650px or less) */
+@media screen and (max-width: 650px){
+    .nav-lists {
+        display: none; /* Hide regular navbar */
+    }
+    .side-bar {
+        display: flex;
+    }
+}
+
+#menu-click:checked + .menu-icon + .dropdown {
+    display: flex;
+}
+
+/* Individual navigation list item */
+.nav-list{
+    text-align: center;
+    margin-left: 3vw;
+}
+/* Navigation link style */
+.hello-user{
+    font-size:150%;
+    color: rgb(245, 245, 245);
+}
+
+/* Navigation link style */
+.nav-link{
+    font-size:150%;
+    color: rgb(245, 245, 245);
+}
+
+/* Hover effect for the menu icon */
+.menu-icon:hover{
+    opacity: 0.5;
+}
+
+/* Hover effect for the navigation links */
+.nav-link:hover{
+    opacity: 0.5;
+  }

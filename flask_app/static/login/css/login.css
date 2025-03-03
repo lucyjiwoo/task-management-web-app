@@ -1,0 +1,70 @@
+/* main style of login page */
+#main-login {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+   }
+.login-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15%;
+    width: 40vw;
+    height: 40vh;
+}
+
+.login-text{
+    align-self: center;
+    font-size:200%;
+    font-weight: bold;
+}
+
+.login-input {
+    font-size:120%;
+    margin: 2%;
+    padding: 1%;
+}
+
+
+#signup-btn, #login-btn{
+    align-self: center;
+    width: 60%;
+    font-size:140%;
+    border-radius: 0.5rem;
+    border-color: rgb(255, 255, 255);
+    margin-top: 10%;
+    color:rgb(255, 255, 255);
+    background-color: rgb(253, 190, 143);
+    padding: 1%;
+}
+
+#feedback {
+    color:rgb(220, 53, 69);
+    font-size: 140%;
+}
+#signup-btn {
+    margin-top: 1%;
+}
+
+.popup-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2%;
+    border-radius: 2rem;
+    font-size: 120%;
+    color: white;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-message.success {
+    background-color: rgb(40, 167, 69); /* Green for success */
+}
+
+.popup-message.error {
+    background-color: rgb(220, 53, 69); /* Red for error */
+}
