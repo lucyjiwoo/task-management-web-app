@@ -1,8 +1,5 @@
-# [Web Application Development](https://gitlab.msu.edu/cse477-fall-2024/course-materials/): Final Exam
-
+# [Web Application Development]: Task Management Tool
 ## Purpose
-
-The purpose of this Final Exam is to assess your understanding of the essential elements of web application development covered this semester; these elements include: 
 
 1. Reactive front-end design
 
@@ -16,23 +13,9 @@ The purpose of this Final Exam is to assess your understanding of the essential 
 
    
 
-## Exam Format and Expectations
+## Goals
 
-The exam is an asynchronous take-home exam that is worth 35% of the final course grade. Please note that: <u>like any class</u>, you are given more time to complete homework assignments than the exam; and, <u>like any class</u>, the purpose of the exam is to assess (i) your independent problem-solving abilities and (ii) your understanding of the course material. It is against the spirit of our exam (<u>like any exam</u>) for us to offer students with implementation support, hints, or extensions. To be perfectly clear:
-
-* The teaching team will **only** answer questions that seek to clarify an exam requirement.
-* The teaching team **will not** help debug code, problem solve, or assist with deployment.
-* The teaching team will not provide extensions on the Final Exam.
-
-Like the homework assignments, your exam will be gradied using the rubric, which you will find at the bottom of this page. Like the homework assignments, the rubric components are "all or nothing".  
-
-**Your exam application should be stand-alone** - that is, it should not be a part of your Homework 1 -3 implementation although you are welcome to use parts of your homework implementation (including the DockerFiles) to help you complete the exam requirements. 
-
-
-
-## Exam Goals
-
-The goal of the final exam is to develop a simplified version of the popular project management tool - [Trello]( https://trello.com/tour ).  Trello is a [Kanban](https://asana.com/resources/what-is-kanban) style application where progress of various project tasks can be easily understood by looking at a visual representation. For example, a project is visualized by a **Board**, different stages of the project are visualized by **Lists**, and **Cards** can be used within a List to represent various tasks. As the project progresses, Cards move from one List to another. For example, a Card for a task that has been completed can be moved from a *'Currently Doing'* List to *'Completed'* List by a team member. Your implementation will be a trimmed down version of a Kanban-style, list-making tool described in the specific requirements below. Before starting the exam, I strongly encourage you to make a free Trello account, and familiarize yourself with the basic functionality of the tool - it will make the specific requirements below a lot easier to follow.
+The goal of this project is to develop a simplified version of the popular project management tool - [Trello]( https://trello.com/tour ).  Trello is a [Kanban](https://asana.com/resources/what-is-kanban) style application where progress of various project tasks can be easily understood by looking at a visual representation. For example, a project is visualized by a **Board**, different stages of the project are visualized by **Lists**, and **Cards** can be used within a List to represent various tasks. As the project progresses, Cards move from one List to another. For example, a Card for a task that has been completed can be moved from a *'Currently Doing'* List to *'Completed'* List by a team member. Your implementation will be a trimmed down version of a Kanban-style, list-making tool described in the specific requirements below. Before starting the exam, I strongly encourage you to make a free Trello account, and familiarize yourself with the basic functionality of the tool - it will make the specific requirements below a lot easier to follow.
 
 
 
@@ -50,89 +33,15 @@ The goal of the final exam is to develop a simplified version of the popular pro
     6.  **Live Changes:** When new Cards are created, existing Lists are edited, or Cards are updated by any user, all other logged-in users should see these changes in real-time without needing to take any explicit action; for example, they should not have to refresh their browser, reload the page, or pressing a refresh button to see the updated content. 
 
 3.  **Board Storage**: You need to store the current state of each Board, (i.e. everything written inside it) in a persistent relational database. Once any user signs up and logins again, they should be presented with the projects they had created or are a part of. The Board page should always show the most up-to-date state. 
-4.  **Chat System**: On each Board page, there will be a window option where a group member can chat  with other group members that are currently active and logged into the same Board page. Similar to HW 3, there will be two windows in the chat system: The first window will allow users to type in and submit their chat text, and the second window will display the text. 
-
-
-## Submitting your assignment
-
-Be sure to perform all development in the `Final-Exam` directory of your <u>Personal Course Repository</u> 
-
-
-
-##### Submit Exam Code
-
-1. Submit your assignment by navigating to the main directory of your <u>Personal Course Repository</u> and Pushing your repo to Gitlab; you can do this by running the following commands:
-
-   ```bash
-   git add .
-   git commit -m 'submitting Final Exam'
-   git push
-   ```
-
-2. You have now submitted the Final Exam; you can run the same commands to re-submit anytime before the deadline. Please check that your submission was successfully uploaded by navigating to the corresponding directory in Personal Course Repository online.
+4.  **Chat System**: On each Board page, there will be a window option where a group member can chat  with other group members that are currently active and logged into the same Board page. There will be two windows in the chat system: The first window will allow users to type in and submit their chat text, and the second window will display the text. 
 
 
 
 **Deploy your web application to Google Cloud**
 
-Deploy your Dockerized App to Google Cloud by running the commands below from the Final Exam directory.
+Deploy your Dockerized App to Google Cloud by running the commands below from the directory.
 
 ```bash
-gcloud builds submit --tag gcr.io/cse477-fall-2024/exam
-gcloud run deploy --image gcr.io/cse477-fall-2024/exam --platform managed
+gcloud builds submit --tag gcr.io/[gcloud project name]/task-management
+gcloud run deploy --image gcr.io/[gcloud project name]/task-management --platform managed
 ```
-
-As we did in the homeworks, please retain the <u>Service URL</u>; You can visit the <u>Service URL</u> above to see a live version of your web application. 
-
-
-
-##### Submit Final Exam Service URL (This is required):
-
-[Submit the Service URL for your live web application in this Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdL39viXSDbN_PmXKlY3MY2sK9jrwcZzs6O1bv1JitHxgR4Qw/viewform). 
-
-
-
-## Rubric
-
-The exam is graded on a 100 point scale; all individual requirements recieve an "all or nothing" grade. The following guide will be used when grading your submission: 
-
-
-
-**Specific Requirements:**
-
-**1:** <u> 5 points</u> -  All "Signup System" Requirements were met. 
-
-**2.1:** <u>10 points</u> -  All Interface "Sign-in Properties" Requirements were met.
-
-**2.2:** <u>5 points</u> -  All Interface "Board Properties" Requirements were met.
-
-**2.3:** <u>10 points</u> -  All Interface "List Properties" Requirements were met.
-
-**2.4:** <u>15 points</u> - All Interface "Card Properties" Requirements were met.
-
-**2.5:** <u>10 points</u> -  All Interface "Card Movement" Requirements were met.
-
-**2.6:** <u>10 points</u> - All Interface "Live Changes" Requirements were met.
-
-**3:** <u>15 points</u> -  All "Board Storage" requirements were met.
-
-**4:** <u>10 points:</u>  All "Chat System" Requirements were met
-
-
-
-**General Requirements:**
-
-<u>5 points</u> - Does the code adhere to Frontend best practices covered throughout the semester?
-
-<u>5 points</u> - Does the code adhere to Backend best practices covered throughout the semester?
-
-
-
-**Please note that you will receive a 0 on the assignment if any of the following conditions are met:**
-
-
-* Your containerized application does not compile
-* Your application is non-functional
-* Your submission was late
-* Your work was plagiarized, borrowed, or copied
-  * If this condition is met, you will also fail the course.
